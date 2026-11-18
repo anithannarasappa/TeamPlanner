@@ -1,0 +1,1161 @@
+/* ======================================
+   TEAMPLANNER EMPLOYEE PAGE
+====================================== */
+
+.employee-page {
+  padding: 22px;
+  background: #f5f4ff;
+  min-height: 100vh;
+  color: #30285c;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.employee-page * {
+  box-sizing: border-box;
+}
+
+/* Welcome */
+
+.employee-welcome {
+  background: linear-gradient(115deg, #342078, #7049d6, #a66de9);
+  color: white;
+  padding: 32px;
+  border-radius: 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  box-shadow: 0 12px 30px #6345b52b;
+}
+
+.employee-welcome > div:first-child > span {
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #e0d4ff;
+  font-weight: 800;
+}
+
+.employee-welcome h1 {
+  color: white;
+  font-size: 32px;
+  margin: 12px 0;
+}
+
+.employee-welcome p {
+  color: #eee5ff;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.employee-welcome-icon {
+  font-size: 85px;
+  margin-right: 35px;
+}
+
+/* Heading */
+
+.employee-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin: 30px 0 20px;
+}
+
+.employee-heading > div > span,
+.employee-results-heading > span {
+  color: #9278d5;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  font-weight: 800;
+}
+
+.employee-heading h2 {
+  font-size: 25px;
+  margin: 7px 0;
+  color: #332660;
+}
+
+.employee-heading p {
+  font-size: 12px;
+  color: #9994af;
+}
+
+.employee-add-btn {
+  padding: 13px 20px;
+  border: 0;
+  border-radius: 11px;
+  background: linear-gradient(110deg, #6845d6, #9a65eb);
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.employee-add-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px #7351cf55;
+}
+
+/* Statistics */
+
+.employee-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 27px;
+}
+
+.employee-stat-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 21px;
+  border-radius: 17px;
+  box-shadow: 0 7px 20px #30285c0d;
+  transition: .3s;
+}
+
+.employee-stat-card:hover {
+  transform: translateY(-5px);
+}
+
+.employee-stat-card > span {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  background: #ffffff80;
+  border-radius: 14px;
+  font-size: 22px;
+}
+
+.employee-stat-card p {
+  font-size: 11px;
+  margin: 0 0 7px;
+}
+
+.employee-stat-card h2 {
+  font-size: 29px;
+  margin: 0;
+}
+
+.emp-total {
+  background: #eae4ff;
+  color: #6947c6;
+}
+
+.emp-available {
+  background: #dff8ed;
+  color: #168d68;
+}
+
+.emp-leave {
+  background: #fff0df;
+  color: #d47a2d;
+}
+
+.emp-department {
+  background: #e0f0ff;
+  color: #2784cf;
+}
+
+/* Toolbar */
+
+.employee-toolbar {
+  display: flex;
+  gap: 15px;
+  margin: 25px 0;
+}
+
+.employee-search {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: white;
+  padding: 0 15px;
+  border: 1px solid #eeebf7;
+  border-radius: 12px;
+}
+
+.employee-search input {
+  border: 0;
+  outline: none;
+  width: 100%;
+  padding: 14px 0;
+  background: transparent;
+  color: #39345e;
+}
+
+.employee-toolbar select {
+  padding: 13px;
+  border: 1px solid #eeebf7;
+  border-radius: 12px;
+  background: white;
+  color: #5c5187;
+  cursor: pointer;
+}
+
+/* Employee Results */
+
+.employee-results-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 25px 0 17px;
+}
+
+.employee-results-heading h3 {
+  font-size: 19px;
+  color: #34275e;
+}
+
+/* Employee Grid */
+
+.employee-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 21px;
+  align-items: stretch;
+}
+
+.employee-card {
+  background: white;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid #eeebf7;
+  box-shadow: 0 7px 22px #35275b0b;
+  transition: .3s;
+}
+
+.employee-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 30px #35275b18;
+}
+
+/* Card Top */
+
+.employee-card-top {
+  height: 145px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.employee-purple {
+  background: linear-gradient(130deg, #7250dc, #b092fa);
+}
+
+.employee-blue {
+  background: linear-gradient(130deg, #2688df, #73c6fa);
+}
+
+.employee-pink {
+  background: linear-gradient(130deg, #df649b, #f5a6c7);
+}
+
+.employee-orange {
+  background: linear-gradient(130deg, #ed9146, #ffc17e);
+}
+
+.employee-green {
+  background: linear-gradient(130deg, #16a77e, #6ddab0);
+}
+
+.employee-card-symbol {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  color: white;
+  font-size: 9px;
+  letter-spacing: 1px;
+  font-weight: 800;
+}
+
+.employee-status {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  border-radius: 20px;
+  padding: 7px 10px;
+  background: white;
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.employee-status.available {
+  color: #15976a;
+}
+
+.employee-status.away {
+  color: #dc8535;
+}
+
+.employee-avatar {
+  width: 75px;
+  height: 75px;
+  border-radius: 24px;
+  background: white;
+  color: #7049ce;
+  font-size: 32px;
+  font-weight: 800;
+  display: grid;
+  place-items: center;
+  border: 5px solid #ffffff70;
+  box-shadow: 0 6px 20px #38235d30;
+}
+
+/* Card Body */
+
+.employee-card-body {
+  padding: 20px;
+}
+
+.employee-card-body h3 {
+  font-size: 18px;
+  color: #35295f;
+  margin: 0 0 5px;
+}
+
+.employee-role {
+  font-size: 11px;
+  color: #9275d0;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+.employee-detail {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-size: 11px;
+  color: #817c9a;
+  margin: 12px 0;
+  overflow-wrap: anywhere;
+}
+
+.employee-detail span {
+  font-size: 15px;
+}
+
+/* Card Buttons */
+
+.employee-card-actions {
+  display: flex;
+  gap: 10px;
+  border-top: 1px solid #f0eef7;
+  padding-top: 15px;
+  margin-top: 17px;
+}
+
+.employee-card-actions button {
+  flex: 1;
+  padding: 10px 7px;
+  border: 0;
+  border-radius: 9px;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.employee-edit {
+  background: #eee9ff;
+  color: #704bc7;
+}
+
+.employee-delete {
+  background: #ffebef;
+  color: #d45270;
+}
+
+.employee-card-actions button:hover {
+  transform: translateY(-2px);
+}
+
+/* Empty Message */
+
+.employee-empty {
+  grid-column: 1 / -1;
+  text-align: center;
+  background: white;
+  padding: 55px 20px;
+  border-radius: 18px;
+}
+
+.employee-empty > span {
+  font-size: 40px;
+}
+
+.employee-empty h3 {
+  color: #40346e;
+}
+
+.employee-empty p {
+  color: #9993ae;
+  font-size: 12px;
+}
+
+.employee-empty button {
+  padding: 11px 18px;
+  border: 0;
+  border-radius: 10px;
+  background: #7552d8;
+  color: white;
+  cursor: pointer;
+}
+
+/* Modal */
+
+.employee-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: #17102d99;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  overflow-y: auto;
+}
+
+.employee-modal {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  max-height: 90vh;
+  overflow-y: auto;
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 20px 60px #17102d55;
+}
+
+.employee-close {
+  position: absolute;
+  right: 18px;
+  top: 18px;
+  border: 0;
+  background: #f2edff;
+  color: #6746c4;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.employee-modal-heading {
+  text-align: center;
+  margin-bottom: 22px;
+}
+
+.employee-modal-heading > span {
+  font-size: 35px;
+}
+
+.employee-modal-heading h2 {
+  font-size: 22px;
+  color: #392b69;
+}
+
+.employee-modal-heading p {
+  color: #a09ab4;
+  font-size: 12px;
+}
+
+.employee-modal form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.employee-modal label {
+  font-size: 11px;
+  font-weight: 700;
+  color: #5a4c86;
+}
+
+.employee-modal input,
+.employee-modal select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #e8e3f5;
+  border-radius: 9px;
+  outline: none;
+  color: #443a69;
+  background: #fcfbff;
+  margin-bottom: 8px;
+}
+
+.employee-modal input:focus,
+.employee-modal select:focus {
+  border-color: #8964e3;
+  box-shadow: 0 0 0 3px #8964e31a;
+}
+
+.employee-form-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.employee-form-actions button {
+  flex: 1;
+  padding: 13px;
+  border: 0;
+  border-radius: 10px;
+  background: linear-gradient(100deg, #6544d1, #9b67e9);
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.employee-form-actions button:last-child {
+  background: #f0edfa;
+  color: #685d91;
+}
+
+/* Responsive */
+
+@media (max-width: 1000px) {
+  .employee-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .employee-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .employee-page {
+    padding: 12px;
+  }
+
+  .employee-grid,
+  .employee-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .employee-welcome {
+    padding: 22px;
+  }
+
+  .employee-welcome-icon {
+    display: none;
+  }
+
+  .employee-welcome h1 {
+    font-size: 24px;
+  }
+
+  .employee-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .employee-toolbar {
+    flex-direction: column;
+  }
+
+  .employee-toolbar select {
+    width: 100%;
+  }
+}
+/* ==========================================
+   TEAMPLANNER - VIBRANT EMPLOYEE DASHBOARD
+========================================== */
+
+.employee-page {
+  min-height: 100vh;
+  padding: 25px;
+  color: #302052;
+  font-family: "Segoe UI", sans-serif;
+  background:
+    radial-gradient(ellipse at 5% 5%, #e5d5ff 0%, transparent 35%),
+    radial-gradient(ellipse at 95% 20%, #ffd9ec 0%, transparent 35%),
+    radial-gradient(ellipse at 50% 100%, #c9f5f0 0%, transparent 40%),
+    #f1efff !important;
+}
+
+.employee-page * {
+  box-sizing: border-box;
+}
+
+/* TOP BANNER */
+
+.employee-welcome {
+  min-height: 240px;
+  padding: 40px;
+  border-radius: 28px;
+  color: white;
+  background: linear-gradient(
+    115deg,
+    #42158d,
+    #803be2,
+    #d44dba,
+    #f18c9e
+  ) !important;
+  box-shadow: 0 18px 40px #7138bd35;
+  position: relative;
+  overflow: hidden;
+}
+
+.employee-welcome::after {
+  content: "✦";
+  position: absolute;
+  right: 170px;
+  top: -75px;
+  font-size: 230px;
+  color: #ffffff20;
+}
+
+.employee-welcome h1 {
+  color: white !important;
+  font-size: 39px;
+  font-weight: 800;
+}
+
+.employee-welcome p {
+  color: #ffeaff !important;
+  font-size: 14px;
+}
+
+.employee-welcome-icon {
+  font-size: 100px;
+  position: relative;
+  z-index: 2;
+}
+
+/* PAGE HEADING */
+
+.employee-heading h2 {
+  color: #542a9a !important;
+  font-size: 29px;
+}
+
+.employee-heading p {
+  color: #8675a7 !important;
+}
+
+.employee-heading > div > span {
+  color: #bc48b3 !important;
+}
+
+/* ADD BUTTON */
+
+.employee-add-btn {
+  background: linear-gradient(110deg, #ed4eae, #843fe0) !important;
+  color: white !important;
+  padding: 15px 24px;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px #a14cce40;
+  font-size: 13px;
+}
+
+.employee-add-btn:hover {
+  background: linear-gradient(110deg, #843fe0, #ed4eae) !important;
+}
+
+/* STAT CARDS */
+
+.employee-stats {
+  gap: 20px;
+}
+
+.employee-stat-card {
+  min-height: 130px;
+  border-radius: 22px;
+  border: 0 !important;
+  box-shadow: 0 12px 25px #5a3a8c17;
+  transition: .3s;
+}
+
+.employee-stat-card:hover {
+  transform: translateY(-8px) scale(1.02);
+}
+
+.employee-stat-card > span {
+  background: #ffffff45 !important;
+  font-size: 27px;
+  width: 58px;
+  height: 58px;
+  border-radius: 18px;
+}
+
+.employee-stat-card p {
+  color: #ffffffed !important;
+  font-weight: 600;
+}
+
+.employee-stat-card h2 {
+  color: white !important;
+  font-size: 36px;
+}
+
+.emp-total {
+  background: linear-gradient(135deg, #6836d9, #a16af6) !important;
+  color: white !important;
+}
+
+.emp-available {
+  background: linear-gradient(135deg, #079e9b, #46d8b4) !important;
+  color: white !important;
+}
+
+.emp-leave {
+  background: linear-gradient(135deg, #f07943, #ffb45e) !important;
+  color: white !important;
+}
+
+.emp-department {
+  background: linear-gradient(135deg, #2678dc, #62b5f5) !important;
+  color: white !important;
+}
+
+/* SEARCH AREA */
+
+.employee-toolbar {
+  padding: 15px;
+  border-radius: 19px;
+  background: linear-gradient(110deg, #e4d9ff, #ffdfef, #d9f5ff) !important;
+  box-shadow: 0 7px 20px #7049aa12;
+}
+
+.employee-search {
+  background: #ffffffb8 !important;
+  border: 2px solid #cdb6f5 !important;
+  border-radius: 13px;
+}
+
+.employee-search span {
+  font-size: 20px;
+}
+
+.employee-search input {
+  color: #56368b !important;
+}
+
+.employee-search input::placeholder {
+  color: #a18bbd;
+}
+
+.employee-toolbar select {
+  background: #ffffffd9 !important;
+  border: 2px solid #cdb6f5 !important;
+  color: #633a9c !important;
+}
+
+/* TEAM HEADING */
+
+.employee-results-heading h3 {
+  color: #583194 !important;
+  font-size: 22px;
+}
+
+.employee-results-heading > span {
+  color: #d34caa !important;
+}
+
+/* EMPLOYEE CARDS */
+
+.employee-grid {
+  gap: 23px;
+}
+
+.employee-card {
+  border: 0 !important;
+  border-radius: 23px !important;
+  overflow: hidden;
+  background: transparent !important;
+  box-shadow: 0 12px 28px #6245a327 !important;
+  transition: .35s ease;
+}
+
+.employee-card:hover {
+  transform: translateY(-9px) rotate(-.5deg);
+  box-shadow: 0 20px 35px #6245a33d !important;
+}
+
+/* COLOURFUL PROFILE HEADERS */
+
+.employee-card-top {
+  height: 175px !important;
+  position: relative;
+}
+
+.employee-purple {
+  background: linear-gradient(135deg, #5930bb, #a477f4) !important;
+}
+
+.employee-blue {
+  background: linear-gradient(135deg, #087dc9, #65c9fa) !important;
+}
+
+.employee-pink {
+  background: linear-gradient(135deg, #d82e94, #fa91bd) !important;
+}
+
+.employee-orange {
+  background: linear-gradient(135deg, #ed692e, #ffc16a) !important;
+}
+
+.employee-green {
+  background: linear-gradient(135deg, #009b85, #68dfb4) !important;
+}
+
+/* PROFILE AVATAR */
+
+.employee-avatar {
+  width: 86px !important;
+  height: 86px !important;
+  border-radius: 27px !important;
+  background: linear-gradient(135deg, #ffffff, #f3e9ff) !important;
+  color: #7541c7 !important;
+  border: 5px solid #ffffff99 !important;
+  font-size: 37px !important;
+  box-shadow: 0 8px 22px #28104a44 !important;
+}
+
+/* CARD CONTENT */
+
+.employee-card-body {
+  background: linear-gradient(
+    150deg,
+    #ffffff,
+    #f0eaff,
+    #ffeaf5
+  ) !important;
+  padding: 23px !important;
+}
+
+.employee-card:nth-child(4n + 2) .employee-card-body {
+  background: linear-gradient(145deg, #ffffff, #e1f4ff, #e6edff) !important;
+}
+
+.employee-card:nth-child(4n + 3) .employee-card-body {
+  background: linear-gradient(145deg, #ffffff, #ffe5f1, #fff0f5) !important;
+}
+
+.employee-card:nth-child(4n + 4) .employee-card-body {
+  background: linear-gradient(145deg, #ffffff, #fff0dc, #ffeadf) !important;
+}
+
+.employee-card-body h3 {
+  color: #482475 !important;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.employee-role {
+  color: #ad45b5 !important;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.employee-detail {
+  color: #79638e !important;
+  font-size: 12px;
+}
+
+.employee-detail span {
+  color: #a34ed1;
+}
+
+/* STATUS */
+
+.employee-status.available {
+  background: #d1ffec !important;
+  color: #00875f !important;
+}
+
+.employee-status.away {
+  background: #fff0d5 !important;
+  color: #c66c12 !important;
+}
+
+/* CARD BUTTONS */
+
+.employee-card-actions {
+  border-top: 2px dashed #d9c7f1 !important;
+}
+
+.employee-edit {
+  background: linear-gradient(110deg, #6841cf, #a477f2) !important;
+  color: white !important;
+}
+
+.employee-delete {
+  background: linear-gradient(110deg, #ec5484, #f48caa) !important;
+  color: white !important;
+}
+
+.employee-card-actions button {
+  border-radius: 11px !important;
+  padding: 12px !important;
+}
+
+.employee-card-actions button:hover {
+  filter: brightness(1.08);
+}
+
+/* EMPTY STATE */
+
+.employee-empty {
+  background: linear-gradient(135deg, #e6d9ff, #ffe2f1, #d9f7f3) !important;
+  border-radius: 22px;
+  padding: 50px;
+}
+
+/* FORM MODAL */
+
+.employee-modal {
+  background: linear-gradient(145deg, #ffffff, #f0e9ff, #ffeafa) !important;
+  border: 3px solid #d8c2ff;
+  border-radius: 24px !important;
+}
+
+.employee-modal-heading > span {
+  display: inline-block;
+  padding: 15px;
+  background: linear-gradient(135deg, #7a4be0, #e65cae);
+  border-radius: 18px;
+}
+
+.employee-modal-heading h2 {
+  color: #6136a3 !important;
+}
+
+.employee-modal input,
+.employee-modal select {
+  background: #ffffffd9 !important;
+  border: 2px solid #dfcef8 !important;
+  border-radius: 11px !important;
+}
+
+.employee-modal label {
+  color: #7742a6 !important;
+}
+
+.employee-form-actions button:first-child {
+  background: linear-gradient(110deg, #7140d5, #df50ae) !important;
+}
+
+.employee-form-actions button:last-child {
+  background: #e6dcfa !important;
+  color: #68449f !important;
+}
+
+/* MOBILE */
+
+@media (max-width: 750px) {
+  .employee-page {
+    padding: 13px;
+  }
+
+  .employee-welcome {
+    padding: 25px;
+  }
+
+  .employee-welcome h1 {
+    font-size: 27px;
+  }
+
+  .employee-welcome-icon {
+    font-size: 65px;
+  }
+}
+
+@media (max-width: 600px) {
+  .employee-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .employee-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .employee-stat-card {
+    padding: 14px;
+  }
+
+  .employee-stat-card > span {
+    width: 40px;
+    height: 40px;
+  }
+}
+/* =========================================
+   TEAMPLANNER - COMPLETE APP COLOR THEME
+========================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif !important;
+  background: #f1edff !important;
+  color: #34205f;
+}
+
+.app-layout {
+  min-height: 100vh;
+  display: flex;
+  background: linear-gradient(135deg, #eee7ff, #fce8f5, #e2f8fa) !important;
+}
+
+.main-content {
+  flex: 1;
+  min-width: 0;
+  background:
+    radial-gradient(circle at 90% 5%, #f8d9f1 0%, transparent 28%),
+    linear-gradient(135deg, #f4efff, #fff0f7, #e9faff) !important;
+}
+
+/* SIDEBAR */
+
+.app-layout aside {
+  background: linear-gradient(
+    180deg,
+    #35156f,
+    #6330b4,
+    #a044b9
+  ) !important;
+  color: white !important;
+  min-height: 100vh;
+  box-shadow: 7px 0 25px #43207525;
+}
+
+.app-layout aside * {
+  color: white;
+}
+
+.app-layout aside button,
+.app-layout aside a {
+  border-radius: 12px;
+  transition: .3s;
+}
+
+.app-layout aside button:hover,
+.app-layout aside a:hover {
+  background: #ffffff25 !important;
+  transform: translateX(4px);
+}
+
+/* NAVIGATION BAR */
+
+.main-content nav {
+  background: linear-gradient(
+    100deg,
+    #5428a1,
+    #873ebd,
+    #d24eaa
+  ) !important;
+  padding: 17px 25px !important;
+  border: none !important;
+  box-shadow: 0 6px 20px #6330a522;
+}
+
+.main-content nav * {
+  color: white !important;
+}
+
+.main-content nav button {
+  background: #ffffff20 !important;
+  border: 1px solid #ffffff35 !important;
+  color: white !important;
+  border-radius: 12px !important;
+  padding: 11px 17px !important;
+  font-weight: 700;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.main-content nav button:hover {
+  background: #ffffff45 !important;
+  transform: translateY(-2px);
+}
+
+/* HEADER */
+
+.main-content header {
+  background: linear-gradient(
+    110deg,
+    #6841c6,
+    #a64fc4,
+    #ed77a8
+  ) !important;
+  color: white !important;
+  padding: 24px 30px !important;
+  border: none !important;
+  border-radius: 0 0 22px 22px;
+  box-shadow: 0 9px 22px #713eaa22;
+}
+
+.main-content header h1,
+.main-content header h2,
+.main-content header h3,
+.main-content header p,
+.main-content header span {
+  color: white !important;
+}
+
+/* ALL MAIN PAGE BUTTONS */
+
+.main-content button {
+  transition: .25s ease;
+}
+
+.main-content button:hover {
+  filter: brightness(1.06);
+}
+
+/* TEAMPLANNER BRAND */
+
+.app-layout h1 {
+  font-family: "Segoe UI", Arial, sans-serif !important;
+}
+
+/* PAGE BACKGROUND */
+
+.main-content > * {
+  position: relative;
+}
+
+/* FOOTER */
+
+.main-content footer {
+  background: linear-gradient(
+    100deg,
+    #35156f,
+    #6330b4,
+    #a044b9
+  ) !important;
+  color: white !important;
+  padding: 20px;
+  border-radius: 18px;
+  margin: 20px;
+}
+
+.main-content footer * {
+  color: white !important;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 700px) {
+  .main-content nav {
+    padding: 12px !important;
+  }
+
+  .main-content header {
+    padding: 18px !important;
+  }
+
+  .app-layout aside {
+    min-height: auto;
+  }
+}
